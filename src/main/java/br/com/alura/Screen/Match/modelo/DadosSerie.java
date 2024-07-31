@@ -1,0 +1,22 @@
+package br.com.alura.Screen.Match.modelo;
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record DadosSerie(@JsonAlias("Title") String titulo,
+
+                         @JsonAlias("totalSeasons") Integer totalTemporadas,
+
+                         @JsonAlias("imdbRating") String avaliacao,
+
+                         @JsonAlias("Genre") String genero,
+
+                         @JsonAlias("Language") String linguagem,
+
+                         @JsonAlias("Actors") String atores,
+
+                         @JsonAlias("Poster") String img,
+
+                         @JsonAlias("Plot") String sumario) {
+}
